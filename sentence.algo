@@ -1,0 +1,31 @@
+ALGORITHM Sentence
+VAR
+    nba : INTEGER := 0;
+    nbm : INTEGER := 0;
+    i : INTEGER := 1;
+    l : INTEGER;
+    ch : CHAR;
+BEGIN
+    write("Write a sentence")
+    Read(ch)
+    WHILE (ch[i]<>".") DO
+    i:=i+1;     
+    END_WHILE
+    write("The length of the sentence is:",i)
+    l:=i;
+    For i FROM 1 TO l STEP 1 DO
+    while (ch[i]<>"") DO
+    i:=i+1;
+    END_WHILE
+    nbm:=nbm+1;
+    i:=i+1;
+    END_For
+    write("the number of words in the sentence is:" , nbm)
+    FOR i FROM 1 TO l STEP 1  DO
+        IF (ch[i]='a'or ch[i]='i' or ch[i]='e' or ch[i]='o' or ch[i]='y'or ch[i]='u') THEN
+         nba:=nba+1;
+        END_IF
+    END_FOR
+    write("The number of vowels in the sentence is :" , nba)
+
+END
